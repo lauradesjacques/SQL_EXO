@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Requetes SQL</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <h1>Exercice Requetes SQL</h1>
-    <div>
+    <h1 style="font-size: 40px;">Exercice Requetes SQL</h1>
+
       <h4>1. Créer la base de donnée sous le nom de 'Boutique'</h4>
-      <br />
+
       <p>CREATE DATABASE IF NOT EXISTS Boutique ;</p>
 
       <h4>2. Création des tables (Manufacturers, Products)</h4>
-      <br />
       <p>
         CREATE TABLE Manufacturers ( Code INT PRIMARY KEY NOT NULL
         AUTO_INCREMENT, Name VARCHAR(50) );
@@ -27,25 +27,25 @@
 
       <h4>3. Inserer dans la table Manufacturers les valeurs</h4>
       <p>
-        INSERT INTO `Manufacturers` (`Name`) VALUES ('Sony');
-        INSERT INTO `Manufacturers` (`Name`) VALUES ('Creative Labs');
-        INSERT INTO `Manufacturers` (`Name`) VALUES ('Hewlett-Packard');
-        INSERT INTO `Manufacturers` (`Name`) VALUES ('Lenovo');
-        INSERT INTO `Manufacturers` (`Name`) VALUES ('Winchester');
-        INSERT INTO `Manufacturers` (`Name`) VALUES ('Apple');
+        INSERT INTO `Manufacturers` (`Name`) VALUES ('Sony'); <br/>
+        INSERT INTO `Manufacturers` (`Name`) VALUES ('Creative Labs'); <br/>
+        INSERT INTO `Manufacturers` (`Name`) VALUES ('Hewlett-Packard');<br/>
+        INSERT INTO `Manufacturers` (`Name`) VALUES ('Lenovo');<br/>
+        INSERT INTO `Manufacturers` (`Name`) VALUES ('Winchester');<br/>
+        INSERT INTO `Manufacturers` (`Name`) VALUES ('Apple');<br/>
       </p>
       <h4>4. Inserer dans la table Products les valeurs</h4>
       <p>
-        INSERT INTO `Products` (`Name`, `Price`, `ManuID`) VALUES ('Hard drive', '240','5');
-        INSERT INTO `Products` (`Name`, `Price`, `ManuID`) VALUES ('Memory', '120','6');
-        INSERT INTO `Products` (`Name`, `Price`, `ManuID`) VALUES ('ZIP drive', '150','4');
-        INSERT INTO `Products` (`Name`, `Price`, `ManuID`) VALUES ('Floppy Disk', '5','6');
-        INSERT INTO `Products` (`Name`, `Price`, `ManuID`) VALUES ('Monitor', '240','1');
-        INSERT INTO `Products` (`Name`, `Price`, `ManuID`) VALUES ('DVD drive', '180','2');
-        INSERT INTO `Products` (`Name`, `Price`, `ManuID`) VALUES ('CD drive', '90','2');
-        INSERT INTO `Products` (`Name`, `Price`, `ManuID`) VALUES ('Printer', '270','3');
-        INSERT INTO `Products` (`Name`, `Price`, `ManuID`) VALUES ('Toner cartridge', '66','3');
-        INSERT INTO `Products` (`Name`, `Price`, `ManuID`) VALUES ('DVD burner', '180','2');
+        INSERT INTO `Products` (`Name`, `Price`, `ManuID`) VALUES ('Hard drive', '240','5');<br/>
+        INSERT INTO `Products` (`Name`, `Price`, `ManuID`) VALUES ('Memory', '120','6');<br/>
+        INSERT INTO `Products` (`Name`, `Price`, `ManuID`) VALUES ('ZIP drive', '150','4');<br/>
+        INSERT INTO `Products` (`Name`, `Price`, `ManuID`) VALUES ('Floppy Disk', '5','6');<br/>
+        INSERT INTO `Products` (`Name`, `Price`, `ManuID`) VALUES ('Monitor', '240','1');<br/>
+        INSERT INTO `Products` (`Name`, `Price`, `ManuID`) VALUES ('DVD drive', '180','2');<br/>
+        INSERT INTO `Products` (`Name`, `Price`, `ManuID`) VALUES ('CD drive', '90','2');<br/>
+        INSERT INTO `Products` (`Name`, `Price`, `ManuID`) VALUES ('Printer', '270','3');<br/>
+        INSERT INTO `Products` (`Name`, `Price`, `ManuID`) VALUES ('Toner cartridge', '66','3');<br/>
+        INSERT INTO `Products` (`Name`, `Price`, `ManuID`) VALUES ('DVD burner', '180','2');<br/>
       </p>
 
       <h4>5. Selectionner le nom de tout les produits </h4>
@@ -146,12 +146,12 @@
         ALTER TABLE Products ADD Remise FLOAT;
         UPDATE Products SET Remise = Price*0.90;
       </p>
-      <p>Pensez à decocher safe update dans preferences SQL</p>
+      <i>Pensez à decocher safe update dans preferences SQL </i>
 
       <h4>23. Appliquer une remise de 10% à tous les produits dont le prix est supérieur ou égal à 120$</h4>
       <p>
         UPDATE Products SET Remise = Price*0.90 WHERE Price >= 120;
       </p>
-    </div>
+
   </body>
 </html>
